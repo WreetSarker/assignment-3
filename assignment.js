@@ -1,12 +1,16 @@
+// https://github.com/WreetSarker/assignment-3
+
 function kilometerToMeter(km) {
-    if (km < 0) {
-        return "Kilometer can't be negative!";
+    // checking for invalid input
+    if (km < 0 || (typeof km !== 'number')) {
+        return "Kilometer is invalid!";
     }
     const meter = km * 1000;
     return meter;
 }
 
 function budgetCalculator(watch, phone, laptop) {
+    //checking for invalid input
     if (watch < 0 || phone < 0 || laptop < 0) {
         return "Values can't be negative!";
     }
@@ -15,8 +19,9 @@ function budgetCalculator(watch, phone, laptop) {
 }
 
 function hotelCost(days) {
-    if (days < 0) {
-        return "Days can't be negative!";
+    //checking for invalid input
+    if (days < 0 || (typeof days !== 'number')) {
+        return "Days can't be invalid!";
     }
 
     let cost;
@@ -31,7 +36,7 @@ function hotelCost(days) {
 }
 
 function megaFriend(arr) {
-
+    //checking for invalid input
     if (arr.length === 0) {
         return "Array shouldn't be empty!";
     }
@@ -44,9 +49,3 @@ function megaFriend(arr) {
     }
     return max;
 }
-
-
-
-
-
-console.log(kilometerToMeter(21.5));
